@@ -56,7 +56,7 @@ mathbox =
   Nil
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor"], controls: { klass: orbitControls } } >>=
   applyOnThree (setThreeClearColor colorWhite 1.0) >>=
   set { scale: Just 500.0, focus: Just 3.0 } >>=

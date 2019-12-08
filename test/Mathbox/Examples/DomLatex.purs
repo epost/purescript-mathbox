@@ -47,7 +47,7 @@ mathbox =
   )
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor", "stats"]
             , controls: { klass: orbitControls }
             , camera: { near : 0.01, far : 1000.0 }

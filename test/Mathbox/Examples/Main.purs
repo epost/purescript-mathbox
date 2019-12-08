@@ -23,7 +23,7 @@ mathbox =
   Nil
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor"]
             , controls: { klass: trackballControls }
             } >>=

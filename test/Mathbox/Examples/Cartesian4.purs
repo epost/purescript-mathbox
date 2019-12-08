@@ -91,7 +91,7 @@ mathbox =
   )
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor"]
             , controls: { klass: orbitControls }
             } >>=

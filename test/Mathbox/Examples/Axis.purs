@@ -48,7 +48,7 @@ transform (Axis a) = Axis (transformAxis a)
 transform x = x
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor"]
             , controls: { klass: orbitControls }
             , camera: { fov: 45 }

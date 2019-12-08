@@ -26,7 +26,7 @@ mathbox =
   )
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core"] } >>=
   applyOnThree (setThreeClearColor colorWhite 1.0) >>=
   set { scale: Just 720.0, focus: Just 1.0 } >>=

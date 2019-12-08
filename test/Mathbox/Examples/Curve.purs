@@ -6,7 +6,7 @@ import Data.List (List(..), (:))
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
 import Foreign
-import Optic.Core ((.~))
+import Data.Lens ((.~))
 import Math as Math
 import Prim as P
 
@@ -44,7 +44,7 @@ mathbox =
   )
 
 main :: Effect Mathbox
-main = do
+main =
   mkMathbox { plugins: ["core", "controls", "cursor"], controls: { klass: orbitControls } } >>=
   applyOnThree setThreeProps >>=
   set ( L.focus .~ Just 3.0 $ mkSet ) >>=

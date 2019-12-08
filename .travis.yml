@@ -5,9 +5,7 @@ node_js: stable
 install:
   - npm install
 script:
-  - bower install --production
   - npm run -s build
-  - bower install
   - npm run -s build-examples
 after_success:
 - >-

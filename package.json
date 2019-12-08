@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "clean": "rimraf bower_components && rimraf output && rimraf .pulp-cache",
-    "install": "bower install",
-    "build": "pulp build -- --strict --censor-codes=ImplicitImport,UnusedImport,UnusedDctorExplicitImport,UnusedExplicitImport",
+    "postinstall": "spago install",
+    "clean": "rimraf output",
+    "install": "spago install",
+    "build": "spago build",
     "clean-examples": "rimraf examples/output",
     "build-examples": "./build-examples.sh",
     "open-examples": "open examples/resources/*.html",
@@ -12,10 +13,9 @@
     "rebuild-all": "npm run clean-all && npm run build-all"
   },
   "devDependencies": {
-    "bower": "^1.8.8",
-    "pulp": "^12.4.2",
-    "purescript": "^0.12.5",
+    "purescript": "^0.13.5",
     "purescript-psa": "^0.7.3",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "spago": "^0.12.1"
   }
 }
